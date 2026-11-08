@@ -13,3 +13,22 @@
 .flow-api-status{display:flex;align-items:center;flex-wrap:wrap;gap:9px;padding:14px 16px;margin:13px 0;border:1px solid #c9e1f5;border-radius:13px;background:#edf7ff}.flow-api-status>span{font-size:12px;white-space:nowrap;color:#195d9b;font-weight:900}.flow-api-status>div{font-size:12px;color:#50718d;flex:1 1 100%;line-height:1.7}.flow-api-status a{border-radius:8px;background:white;padding:7px 9px;font-size:11px;color:#1a5d93;font-weight:800;border:1px solid #cee3f4}.flow-official{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
 @media(max-width:1100px){.stage-rail{display:flex}.stage-button{min-height:106px}}
 @media(max-width:720px){.flow-launch-grid{grid-template-columns:1fr}.stage-button{min-height:104px}}
+
+
+.stage-matrix-block{margin:18px 0 16px;padding:18px;border:1px solid #d4e4f3;border-radius:18px;background:linear-gradient(180deg,#f8fbff 0%,#ffffff 100%)}
+.section-title.compact{margin-bottom:14px}.section-title.compact h2{font-size:24px}.table-scroll{overflow:auto;border:1px solid #d8e6f3;border-radius:15px;background:#fff}.stage-matrix-table{width:100%;border-collapse:collapse;min-width:840px}.stage-matrix-table th,.stage-matrix-table td{padding:12px 14px;border-bottom:1px solid #e7eef6;text-align:left;font-size:13px;vertical-align:top}.stage-matrix-table th{background:#eff6fd;color:#1a4f82;font-size:12px;letter-spacing:-.01em}.stage-matrix-table tbody tr:nth-child(even){background:#fbfdff}.stage-matrix-table tbody tr:last-child td{border-bottom:0}.stage-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#e9f3ff;color:#155b9f;font-weight:800;font-size:12px;white-space:nowrap}.stage-rank{display:inline-block;padding:4px 9px;border-radius:999px;background:#155caa;color:#fff;font-size:11px;font-weight:800}.matrix-note{font-size:12px;color:#64809a;line-height:1.7;margin:10px 2px 0}.flow-pagination-wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px 6px}.flow-pagination-wrap p{margin:0;font-size:12px;color:#5d7b95;font-weight:800}.flow-pagination{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.page-btn{min-width:38px;height:38px;padding:0 12px;border:1px solid #c9dced;border-radius:10px;background:#fff;color:#165f9d;font-weight:800}.page-btn.active{background:#165faa;color:#fff;border-color:#165faa}.page-btn[disabled]{opacity:.45;cursor:default}.flow-card-summary{font-size:12px;color:#4f6e8a;margin:0 0 6px}
+@media(max-width:720px){.stage-matrix-block{padding:14px}.section-title.compact h2{font-size:21px}.flow-pagination-wrap{display:block}.flow-pagination-wrap p{margin-bottom:9px}.page-btn{height:36px;min-width:36px;padding:0 10px}}
+
+/* 6×8 coverage matrix: observed tender types, not project completion */
+.matrix-legend{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:12px;color:#426e97;margin:5px 0 12px}
+.stage-matrix-table th[scope="row"]{font-weight:850;color:#173e70;white-space:nowrap;min-width:110px}
+.stage-matrix-table th[scope="col"]{text-align:center;white-space:nowrap;line-height:1.25;font-size:12px}
+.stage-matrix-table th[scope="col"]:first-child,.stage-matrix-table th[scope="col"]:last-child{text-align:left}
+.stage-matrix-table th[scope="col"] span{font-size:10px;color:#577a9a}
+.stage-matrix-table .coverage-cell{text-align:center;min-width:55px;vertical-align:middle}
+.coverage-on{color:#1677cf;font-style:normal;font-size:20px;font-weight:900}
+.coverage-off{color:#bacbdc;font-style:normal;font-size:16px}
+.stage-matrix-table .latest-cell{min-width:200px;font-size:12px;line-height:1.55;white-space:normal}
+.stage-matrix-table th,.stage-matrix-table td{padding:10px 9px}
+.stage-matrix-block .matrix-note strong{color:#215a96}
+@media(max-width:720px){.stage-matrix-table{min-width:880px}.matrix-legend{font-size:11px}.flow-pagination{gap:5px}}

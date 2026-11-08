@@ -1,0 +1,27 @@
+
+/* LANDLAB 6 districts × 8 tender work types: compact home snapshot */
+.district-overview{margin:28px auto 34px;padding:24px 26px;border:1px solid #d6e7f5;border-radius:23px;background:linear-gradient(145deg,#eff7ff 0%,#fff 85%);box-shadow:0 13px 40px rgba(13,67,127,.05)}
+.district-overview-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:16px}
+.district-overview-head h2{font-size:26px;line-height:1.25;margin:4px 0 5px;color:#144d88}
+.district-overview-head p{font-size:13px;color:#6084a5;margin:0}
+.district-matrix-scroll{overflow:auto;border:1px solid #d8e7f5;background:#fff;border-radius:15px}
+.district-matrix{width:100%;border-collapse:collapse;min-width:850px}
+.district-matrix thead{background:#e9f4ff}
+.district-matrix th,.district-matrix td{padding:11px 9px;text-align:center;font-size:12px;border-bottom:1px solid #e7eff7}
+.district-matrix thead th{color:#215e99;white-space:nowrap;font-size:12px;line-height:1.45}
+.district-matrix thead th span{display:block;font-size:10px;font-weight:600}
+.district-matrix th:first-child,.district-matrix td:last-child{text-align:left}
+.district-matrix tbody th{white-space:nowrap;font-size:13px;color:#144777;text-align:left}
+.district-matrix tbody th a:hover{text-decoration:underline}
+.district-matrix tbody tr:nth-child(even){background:#fbfdff}
+.district-matrix tbody tr:last-child td,.district-matrix tbody tr:last-child th{border-bottom:0}
+.district-matrix .home-stage-cell{min-width:48px}
+.district-matrix .home-has{color:#1676ca;font-size:19px;font-weight:900}
+.district-matrix .home-missing{color:#bdcfe0;font-size:15px}
+.district-matrix .home-latest{min-width:165px;color:#567b99;font-size:11px}
+.district-overview .matrix-legend{display:flex;gap:20px;color:#547e9f;font-size:12px;margin:0 0 12px}
+.district-overview .coverage-on{color:#1677cf;font-size:18px;font-style:normal}
+.district-overview .coverage-off{color:#b7cade;font-style:normal}
+.district-overview-note{font-size:12px;line-height:1.8;margin:13px 0 0;color:#567a9b}
+.district-overview-note strong{color:#185e9c}
+@media(max-width:720px){.district-overview{padding:18px 14px;margin-top:20px;border-radius:15px}.district-overview-head{display:block}.district-overview-head h2{font-size:21px}.district-overview-head a{margin-top:13px;display:inline-flex}.district-overview .matrix-legend{gap:10px;flex-wrap:wrap;font-size:11px}}
