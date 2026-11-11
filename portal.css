@@ -33,35 +33,3 @@
 .data-warning,.lh-plans-link{margin:17px 0 10px;background:#f5faff;border:1px solid #daebfa;border-radius:11px;padding:12px 15px;font-size:12px;color:#476a8d;line-height:1.7}
 @media(max-width:1100px){.roadmap-steps{display:flex;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x proximity}.roadmap-steps li{flex:0 0 154px;scroll-snap-align:start}.roadmap-steps li::after{display:none}.official-plans{grid-template-columns:1fr}.plans-links{flex-direction:row;flex-wrap:wrap;gap:12px}}
 @media(max-width:720px){.roadmap-preview{padding-top:23px}.roadmap-steps li{flex-basis:146px}.roadmap-bottom{align-items:flex-start;flex-direction:column;gap:12px}.data-source-strip{align-items:flex-start}.data-source-strip a{align-self:flex-start}.data-source-strip div{min-width:0}.official-plans{padding:17px}.plans-links{flex-direction:column}}
-
-/* LANDLAB: 맥북에서도 가로형 상단 메뉴 표시 */
-@media (min-width: 850px) and (max-width: 1030px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .topnav {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    width: auto;
-    gap: 10px;
-    padding: 0;
-    margin-left: auto;
-    box-shadow: none;
-    font-size: 12px;
-    white-space: nowrap;
-  }
-
-  .topnav a {
-    padding: 12px 0;
-    border-bottom: 3px solid transparent;
-    
-  }
-
-  .topbar-inner {
-    gap: 12px;
-  }
-}
-    

@@ -6,7 +6,15 @@ const finite = x => Number.isFinite(x);
 const $menu = $('pageMenu'), $nav = $('pageNav');
 if($menu && $nav){$menu.addEventListener('click',()=>{const o=$nav.classList.toggle('open');$menu.setAttribute('aria-expanded',String(o));$menu.textContent=o?'✕':'☰'});$nav.addEventListener('click',e=>{if(e.target.closest('a')){$nav.classList.remove('open');$menu.setAttribute('aria-expanded','false');$menu.textContent='☰'}});}
 function csvDownload(name, rows){const value='\ufeff'+rows.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n');const a=document.createElement('a');const url=URL.createObjectURL(new Blob([value],{type:'text/csv;charset=utf-8'}));a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-function getNumbers(raw){const tokens=String(raw).trim().split(/[\s,;]+/).filter(Boolean);if(!tokens.length)throw Error('숫자를 하나 이상 입력하세요.');const arr=tokens.map(Number);if(arr.some(n=>!finite(n)))throw Error('숫자가 아닌 값이 포함되어 있습니다.');if(arr.length>10000)throw Error('한 번에 최대 10,000개까지 계산할 수 있습니다.');return arr;}
+function getNumbers(raw){
+ const text=String(raw||'').trim();if(!text)throw Error('숫자를 하나 이상 입력하세요.');
+ // Excel rows/columns are tab/newline separated: preserve commas used as thousands grouping per cell.
+ let tokens=/[\t\r\n]/.test(text)?text.split(/[\t\r\n]+/).flatMap(cell=>cell.trim().split(/[;\s]+/).filter(Boolean)):text.split(/[,;\s]+/).filter(Boolean);
+ const arr=tokens.filter(Boolean).map(t=>{const v=String(t).trim();return /^[+-]?\d{1,3}(,\d{3})+(\.\d+)?$/.test(v)?Number(v.replaceAll(',','')):Number(v)});
+ if(arr.length>10000)throw Error('한 번에 최대 10,000개까지 계산할 수 있습니다.');
+ if(arr.some(n=>!Number.isFinite(n)))throw Error('숫자가 아닌 값이 포함되어 있습니다. 엑셀 범위에 문자·단위·병합 셀이 있는지 확인하세요.');
+ return arr;
+}
 if($('statsRun')){
  const run=()=>{const out=$('statsOut'), err=$('statsError');try{const a=getNumbers($('statsNumbers').value),b=[...a].sort((x,y)=>x-y),n=a.length,mean=a.reduce((x,y)=>x+y,0)/n,median=n%2?b[(n-1)/2]:(b[n/2-1]+b[n/2])/2,sd=n>1?Math.sqrt(a.reduce((x,y)=>x+(y-mean)**2,0)/(n-1)):null;out.innerHTML=[['표본 수',ko(n)],['평균',ko(mean)],['중앙값',ko(median)],['표본 표준편차',sd===null?'—':ko(sd)],['최솟값',ko(b[0])],['최댓값',ko(b.at(-1))]].map(([label,num])=>`<div class="stat-box"><small>${label}</small><strong>${num}</strong></div>`).join('');err.textContent='';}catch(e){out.innerHTML='';err.textContent=e.message;}};
  $('statsRun').addEventListener('click',run);run();

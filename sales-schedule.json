@@ -1,0 +1,55 @@
+{
+  "status": "not_verified",
+  "updatedAt": null,
+  "source": "공식 청약 공고 확인 후 관리자가 갱신",
+  "districts": [
+    {
+      "name": "남양주 왕숙",
+      "preSubscription": null,
+      "mainSubscription": null,
+      "contract": null,
+      "moveIn": null,
+      "officialUrl": "https://apply.lh.or.kr/"
+    },
+    {
+      "name": "남양주 왕숙2",
+      "preSubscription": null,
+      "mainSubscription": null,
+      "contract": null,
+      "moveIn": null,
+      "officialUrl": "https://apply.lh.or.kr/"
+    },
+    {
+      "name": "하남 교산",
+      "preSubscription": null,
+      "mainSubscription": null,
+      "contract": null,
+      "moveIn": null,
+      "officialUrl": "https://apply.lh.or.kr/"
+    },
+    {
+      "name": "고양 창릉",
+      "preSubscription": null,
+      "mainSubscription": null,
+      "contract": null,
+      "moveIn": null,
+      "officialUrl": "https://apply.lh.or.kr/"
+    },
+    {
+      "name": "인천 계양",
+      "preSubscription": null,
+      "mainSubscription": null,
+      "contract": null,
+      "moveIn": null,
+      "officialUrl": "https://apply.lh.or.kr/"
+    },
+    {
+      "name": "부천 대장",
+      "preSubscription": null,
+      "mainSubscription": null,
+      "contract": null,
+      "moveIn": null,
+      "officialUrl": "https://apply.lh.or.kr/"
+    }
+  ]
+}
